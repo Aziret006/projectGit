@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 
 export default function CardBlock({ data, name }) {
   const [query, setQuery] = useState("Бестселлер");
-
+  
   const handleInputChange = (value) => {
     const filter = data.filter((game) => game.status === value);
     setQuery(filter);

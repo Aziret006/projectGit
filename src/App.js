@@ -74,7 +74,7 @@ export let game = [
   },
   {
     id: 6,
-    title: "Wolfenstein Young Blood",
+    title: "Wolfenstein Young",
     image: cover6,
     language: { text: true, audio: true },
     video: "https://www.youtube.com/embed/XfCxamVM9Vw?si=j89YkjQpPleELrOF",
