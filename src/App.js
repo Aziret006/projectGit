@@ -25,12 +25,13 @@ const name = [
   { name: "для xbox" },
   { name: "для pc" },
 ];
-let game = [
+export let game = [
   {
     id: 1,
     title: "Witcher 3: Wild Hunt",
     image: cover1,
     language: { text: true, audio: true },
+    video: "https://www.youtube.com/embed/FWhZl9rN79c?si=FQ3gY7JgMzhRSsz1",
     price: "$59.99",
     status: "для ps4",
   },
@@ -39,6 +40,7 @@ let game = [
     title: "Witcher 3: Wild Hunt",
     image: cover2,
     language: { text: true, audio: true },
+    video: "https://www.youtube.com/embed/FWhZl9rN79c?si=FQ3gY7JgMzhRSsz1",
     price: "$139.99",
     status: "распродажа",
   },
@@ -47,6 +49,7 @@ let game = [
     title: "Control",
     image: cover3,
     language: { text: true, audio: true },
+    video: "https://www.youtube.com/embed/KbiE8Fuyz1o?si=Tzj4Ini0-Ax5yi0F",
     price: "$129.99",
     status: "новинки",
   },
@@ -55,6 +58,7 @@ let game = [
     title: "Devil May Cry 5",
     image: cover4,
     language: { text: true, audio: true },
+    video: "https://www.youtube.com/embed/dsByjXPGYUE?si=t-e1Ytf0Ibh-o6RS",
     releaseDate: "2015-05-18",
     price: "$159.99",
     status: "распродажа",
@@ -64,6 +68,7 @@ let game = [
     title: "RAGE 2",
     image: cover5,
     language: { text: true, audio: true },
+    video: "https://www.youtube.com/embed/tCz8Tohf7B0?si=c-2lOGBDx8YWWR7D",
     price: "$129.99",
     status: "для pc",
   },
@@ -72,57 +77,64 @@ let game = [
     title: "Wolfenstein Young Blood",
     image: cover6,
     language: { text: true, audio: true },
+    video: "https://www.youtube.com/embed/XfCxamVM9Vw?si=j89YkjQpPleELrOF",
     price: "$20.99",
     status: "для pc",
   },
   {
-    id: 5,
-    title: "Assassin's Creed Odyssey",
+    id: 7,
+    title: "Assassin's Creed",
     image: cover7,
     language: { text: true, audio: true },
     price: "$68.99",
     status: "новинки",
+    video: "https://www.youtube.com/embed/4J2tr-r0xoM?si=b7wDM9n82nOAZxqm",
   },
   {
-    id: 5,
+    id: 8,
     title: "Darksiders Genesis",
     image: cover8,
     language: { text: true, audio: true },
     price: "$36.99",
     status: "для xbox",
+    video: "https://www.youtube.com/embed/4J2tr-r0xoM?si=b7wDM9n82nOAZxqm",
   },
   {
-    id: 5,
+    id: 9,
     title: "SW: Jedi Fallen Order",
     image: cover9,
     language: { text: true, audio: true },
     price: "$34.99",
     status: "для xbox",
+    video: "https://www.youtube.com/embed/4J2tr-r0xoM?si=b7wDM9n82nOAZxqm",
   },
   {
-    id: 5,
+    id: 10,
     title: "Metro: Exodus",
     image: cover10,
     language: { text: true, audio: true },
     price: "$54.99",
     status: "для pc",
+    video: "https://www.youtube.com/embed/4J2tr-r0xoM?si=b7wDM9n82nOAZxqm",
   },
   {
-    id: 5,
+    id: 11,
     title: "Metro: Exodus",
     image: cover11,
     language: { text: true, audio: true },
     price: "$69.99",
     status: "для pc",
+    video: "https://www.youtube.com/embed/4J2tr-r0xoM?si=b7wDM9n82nOAZxqm",
   },
 
   {
-    id: 5,
+    id: 12,
     title: "Devil May Cry 5",
     image: cover12,
     language: { text: true, audio: true },
     status: "новинки",
     price: "$55.99",
+    video: "https://www.youtube.com/embed/4J2tr-r0xoM?si=b7wDM9n82nOAZxqm",
   },
 ];
 
@@ -136,7 +148,7 @@ export default function App() {
       >
         <Routes>
           <Route path="/" element={<CardBlcok data={game} name={name} />} />
-          <Route path="/pages" element={<Pages />} />
+          <Route path="/pages/:id/" element={<Pages data={game} />} />
         </Routes>
       </div>
     </div>

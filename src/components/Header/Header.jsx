@@ -24,7 +24,7 @@ export default function Header({ data }) {
     <div className="backg_header">
       <div className="wrap">
         <div className="header_all">
-          <button className="custom-button">
+          <button className="custom-button" onClick={() => alert("не работает!!!")}>
             <FaBarsStaggered />
             каталог игр
           </button>
@@ -32,7 +32,7 @@ export default function Header({ data }) {
             <h1>Game store</h1>
           </div>
           <div className="header_end">
-            <div className="header_title">
+            <div className="header_title" onClick={() => alert("не работает!!!")}>
               <h4>Войти</h4>
               <span className="h_200"></span>
               <h4>Регистрация</h4>

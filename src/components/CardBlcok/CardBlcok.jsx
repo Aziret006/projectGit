@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./style.scss";
 import User from "../cards/User/User";
+import { useParams } from "react-router-dom";
 
 export default function CardBlock({ data, name }) {
   const [query, setQuery] = useState("Бестселлер");

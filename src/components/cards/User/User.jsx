@@ -6,13 +6,13 @@ export default function User({ data }) {
     <div className="card_grid">
       {data.map((game) => {
         return (
-          <div className="card_page">
-            <NavLink to="/pages">
+          <NavLink to={`/pages/${game.id}`}>
+            <div className="card_page">
               <img src={game.image} alt="" />
-            </NavLink>
-            <h4>{game.title}</h4>
-            <button>{game.price}</button>
-          </div>
+              <h4>{game.title}</h4>
+              <button>{game.price}</button>
+            </div>
+          </NavLink>
         );
       })}
     </div>
