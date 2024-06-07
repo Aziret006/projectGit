@@ -1,0 +1,79 @@
+.card_grid {
+    margin-top: 30px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 30px;
+    justify-content: center;
+    // margin-left: auto;
+    // margin-right: auto;
+    @media (max-width: 1230px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        @media (max-width: 1028px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            @media (max-width: 818px) {
+                grid-template-columns: 1fr 1fr 1fr;
+                @media (max-width: 600px) {
+                    grid-template-columns: 1fr 1fr;
+                    @media (max-width: 400px) {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            }
+        }
+    }
+}
+.card_page {
+    width: 170px;
+    display: grid;
+    justify-content: center;
+    @media (max-width: 400px) {
+        width: 100% !important;
+    }
+    img {
+        width: 170px;
+        height: 250px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s;
+        @media (max-width: 400px) {
+            width: 300px !important;
+            height: 400px;
+        }
+    }
+    h4 {
+        color: #ffffff;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 10px;
+        font-weight: 800;
+        margin-bottom: 5px;
+        @media (max-width: 400px) {
+            font-size: 20px;
+        }
+    }
+    button {
+        display: flex;
+        justify-content: center;
+        background: yellow;
+        border: none;
+        color: #000000;
+        padding: 5px 10px;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 800;
+        cursor: pointer;
+        border-radius: 4px;
+        margin: 0 5px;
+        transition:
+            background-color 0.3s,
+            color 0.3s;
+        transition: transform 0.2s;
+        &:hover {
+            background-color: #747a18;
+        }
+        @media (max-width: 400px) {
+            font-size: 20px;
+        }
+    }
+}

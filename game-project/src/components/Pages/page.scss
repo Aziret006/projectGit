@@ -1,0 +1,107 @@
+.pages {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h1 {
+        color: #fff;
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .pages_all {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0 0 0;
+
+        .pages_flex {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        .pages_block_flex {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: 20px;
+
+            .pages_block {
+                flex: 1;
+                margin: 0 10px;
+                padding: 20px;
+                text-align: center;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                &:hover {
+                    background: #373131;
+                }
+
+                h4 {
+                    margin-bottom: 10px;
+                    color: #fff;
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 1.2em;
+                    margin-bottom: 10px;
+                    color: #fff;
+                }
+
+                .border,
+                .create_border {
+                    height: 2px;
+                    background: #000000;
+                    &:hover {
+                        background: #ff0000;
+                    }
+                }
+            }
+        }
+    }
+
+    .youtube {
+        width: 100%;
+        height: 400px;
+        max-width: 1200px;
+        aspect-ratio: 16 / 9;
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pages_all {
+        .pages_flex {
+            flex-direction: column;
+            align-items: center;
+
+            ul {
+                margin-bottom: 20px;
+            }
+        }
+
+        .pages_block_flex {
+            flex-direction: column;
+
+            .pages_block {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
